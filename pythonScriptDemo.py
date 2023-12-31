@@ -22,6 +22,12 @@ for m in memberData:
 # for m in cur:
 #   print(m)
 
+# Skriv endast ut Homer
+memberData = cur.execute(
+  "SELECT id, fn FROM members WHERE fn = 'Homer'")
+for m in memberData:
+  print(m)
+
 cur.close()
 conn.close()
 
